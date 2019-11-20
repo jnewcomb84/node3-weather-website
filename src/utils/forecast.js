@@ -20,7 +20,7 @@ const forecast = (longitude, latitude, cb) => {
              cb("Unable to find the given location");
          }
          else {
-            cb(undefined, `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out, but feels like ${body.currently.apparentTemperature}. There is a ${body.currently.precipProbability}% chance of rain.`);
+            cb(undefined, `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. The high today is ${body.daily.data[0].temperatureHigh} with a low of ${body.daily.data[0].temperatureLow}. There is a ${body.currently.precipProbability}% chance of rain.`);
          }
     });
 };
